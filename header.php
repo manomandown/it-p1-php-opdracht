@@ -12,9 +12,8 @@
 
 	<header>
 		<nav class="nav-header-main">
-			
 			<a class="header-logo" href="index.php">
-				<img src="magister.jpg" alt="logo">
+				<img src= "magister.jpg" alt="logo">
 			</a>
 			<ul>
 				<li><a href="index.php">Home</a></li>
