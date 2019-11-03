@@ -29,15 +29,15 @@
         <?php
         if (!isset($_SESSION['id'])) {
           echo '<form action="includes/login.inc.php" method="post">
-            <input type="text" name="mailuid" placeholder="E-mail/Username">
-            <input type="password" name="pwd" placeholder="Password">
+            <input type="text" name="mailuid" placeholder="E-mail/Gebruikersnaam">
+            <input type="password" name="pwd" placeholder="Wachtwoord">
             <button type="submit" name="login-submit">Login</button>
           </form>
           <a href="signup.php" class="header-signup">Signup</a>';
         }
         else if (isset($_SESSION['id'])) {
           echo '<form action="includes/logout.inc.php" method="post">
-            <button type="submit" name="login-submit">Logout</button>
+            <button type="submit" name="login-submit">Log uit</button>
           </form>';
         }
         ?>

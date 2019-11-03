@@ -6,33 +6,33 @@
     <main>
       <div class="wrapper-main">
         <section class="section-default">
-          <h1>Signup</h1>
+          <h1>Maak aan</h1>
           <?php
           
           if (isset($_GET["error"])) {
             if ($_GET["error"] == "emptyfields") {
-              echo '<p class="signuperror">Fill in all fields!</p>';
+              echo '<p class="signuperror">Full alles in!</p>';
             }
             else if ($_GET["error"] == "invaliduidmail") {
-              echo '<p class="signuperror">Invalid username and e-mail!</p>';
+              echo '<p class="signuperror">Ongeldige gebruikersnaam of email!</p>';
             }
             else if ($_GET["error"] == "invaliduid") {
-              echo '<p class="signuperror">Invalid username!</p>';
+              echo '<p class="signuperror">Ongeldige gebruikersnaam!</p>';
             }
             else if ($_GET["error"] == "invalidmail") {
-              echo '<p class="signuperror">Invalid e-mail!</p>';
+              echo '<p class="signuperror">Ongeldige e-mail!</p>';
             }
             else if ($_GET["error"] == "passwordcheck") {
-              echo '<p class="signuperror">Your passwords do not match!</p>';
+              echo '<p class="signuperror">Je wachtwoorden kloppen niet!</p>';
             }
             else if ($_GET["error"] == "usertaken") {
-              echo '<p class="signuperror">Username is already taken!</p>';
+              echo '<p class="signuperror">Gebruikersnaam is al genomen!</p>';
             }
           }
         
           else if (isset($_GET["signup"])) {
             if ($_GET["signup"] == "success") {
-              echo '<p class="signupsuccess">Signup successful! Try login in</p>';
+              echo '<p class="signupsuccess">Aanmaak voltooid! probeer in te loggen</p>';
             }
           }
           ?>
@@ -40,10 +40,10 @@
             <?php
             
             if (!empty($_GET["uid"])) {
-              echo '<input type="text" name="uid" placeholder="Username" value="'.$_GET["uid"].'">';
+              echo '<input type="text" name="uid" placeholder="Gebruikersnaam" value="'.$_GET["uid"].'">';
             }
             else {
-              echo '<input type="text" name="uid" placeholder="Username">';
+              echo '<input type="text" name="uid" placeholder="Gebruikersnaam">';
             }
 
             
@@ -54,16 +54,12 @@
               echo '<input type="text" name="mail" placeholder="E-mail">';
             }
             ?>
-            <input type="password" name="pwd" placeholder="Password">
-            <input type="password" name="pwd-repeat" placeholder="Repeat password">
-            <button type="submit" name="signup-submit">Signup</button>
+            <input type="password" name="pwd" placeholder="Wachtwoord">
+            <input type="password" name="pwd-repeat" placeholder="Herhaal Wachtwoord">
+            <button type="submit" name="signup-submit">Maak aan</button>
           </form>
           
         </section>
       </div>
     </main>
 
-<?php
-  
-  require "footer.php";
-?>

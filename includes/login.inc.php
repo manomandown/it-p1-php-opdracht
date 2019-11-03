@@ -35,14 +35,29 @@ if (isset($_POST['login-submit'])) {
         }
         
         else if ($pwdCheck == true) {
+ 
+        
+          if ($row['user_type'] == 'admin') {
 
           session_start();
+            $_SESSION['id'] = $row['idUsers'];
+            $_SESSION['uid'] = $row['uidUsers'];
+            $_SESSION['email'] = $row['emailUsers'];
+            
+          header("location: ../adminpage.php?login=succes"); 
+          exit();
+          }
+        
+          else{
+            session_start();
           $_SESSION['id'] = $row['idUsers'];
           $_SESSION['uid'] = $row['uidUsers'];
           $_SESSION['email'] = $row['emailUsers'];
           
           header("Location: ../index.php?login=success");
           exit();
+          }
+         
         }
       }
       else {
